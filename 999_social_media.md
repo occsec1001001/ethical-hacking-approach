@@ -1,0 +1,15 @@
+https://sowdust.github.io/fb-search/
+https://github.com/sowdust/searchbook
+https://www.mtg-bi.com/blog/facebook-graph-search-workaround
+https://lookup-id.com/
+https://barometer.agorapulse.com/home
+https://osint.link/osint-part2/#facebook
+https://www.allmytweets.net/connect/
+https://www.trendsmap.com/#
+http://ctrlq.org/first/
+https://socialbearing.com/search/followers
+https://spoonbill.io/
+https://checkusernames.com/
+https://www.usersearch.org/
+https://sherlock-project.github.io/
+https://tone-analyzer-demo.ng.bluemix.net/

@@ -1,0 +1,10 @@
+[recon-ng][default] > marketplace install reporting/html
+[recon-ng][default] > marketplace install reporting/csv
+[recon-ng][default] > marketplace install reporting/list
+[recon-ng][default] > marketplace install recon/hosts-hosts/bing_ip
+[recon-ng][default] > keys add bing_api 
+[recon-ng][default] > marketplace install recon/domains-credentials/pwnedlist/
+[recon-ng][default] > marketplace install recon/domains-credentials/pwnedlist/domain_ispwned
+[recon-ng][default] > keys add pwnedlist_api
+[recon-ng][default] > marketplace install discovery/info_disclosure/interesting_files
+[recon-ng][default] > keys add pwnedlist_secret
