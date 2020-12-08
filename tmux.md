@@ -59,7 +59,6 @@ bind p paste-buffer
 
 ### tmux use
 
-
 - start:  ``` tmux ```
 - start with session name:  ```tmux new -s myname```
 - attach:   ```tmux a  #  (or at, or attach)```
@@ -72,38 +71,28 @@ bind p paste-buffer
 
 #### Window No.1
 
-* `Control + a` main use command before other commands
-
-
-* `Control + a` and `?` to bring up list of keyboard shortcuts
-* `Control + a` and `?` to split window
-* `Control + a` and `<Space>` to change pane arrangement
-* `Control + a` and `o` to rotate panes
-* `Control + a` and `h`, `j`, `k`, `l` to move left, down, up, right. Respectively. (vim hjkl)
-* `Control + a` and `;` to go to last panel
-
+- main use command before other commands
+```
+ ctrl+a a 
+```
 - shortcuts
-`Control + a` and `?`
-- split window
-`Control + a` and `?`
+```?```
+- vertical split window
+```%```
+- horizontal split window
+```‘’```
 - change pane arrangement
-`Control + a` and `<Space>`
+```<Space>```
 - rotate panes
-`Control + a` and `o`
+```o```
 - move left [vim] 
-`Control + a` and `h`
+```h```
 - move down [vim]
-`Control + a` and `j`
+```j```
 - move up [vim]
-`Control + a` and `k`
+```k```
 - move right [vim]
-`Control + a` and `l`
-- list sessions
-```tmux ls```
-- kill sessions
-```tmux kill-session -t myname```
-- name session
-
+```l```
 - create window
 
 - list windows
@@ -121,13 +110,27 @@ bind p paste-buffer
 - goto window
 
 
+## Commands
+
+```
+:
+```
+:list-keys 	# shows all the commands
+:list-panes 	# shows the names of all panes
+:resize-pane -D 20 	# resize down
+:resize-pane -U 20 	# resize up
+:resize-pane -L 20 	# resize left
+:resize-pane -R 20 	# resize right
+:swap-pane -s 3 -t 1 	# swap pane ‘1’ with pane ‘3’
+```
+
 ## Sessions
 ```
     :new<CR>  new session
     s  list sessions
     $  name session
 ```
-## <a name="WindowsTabs"></a>Windows (tabs)
+## Windows or tabs
 ```
     c  create window
     w  list windows
@@ -137,11 +140,10 @@ bind p paste-buffer
     ,  name window
     &  kill window
 ```
-## <a name="PanesSplits"></a>Panes (splits) 
+## Window Panees 
 ```
     %  vertical split
     "  horizontal split
-    
     o  swap panes
     q  show pane numbers
     x  kill pane
@@ -153,29 +155,20 @@ bind p paste-buffer
     <prefix> } (Move the current pane right)
     <prefix> z toggle pane zoom
 ```
-## <a name="syncPanes"></a>Sync Panes 
-
-You can do this by switching to the appropriate window, typing your Tmux prefix (commonly Ctrl-B) and then a colon to bring up a Tmux command line, and typing:
-
-```
-:setw synchronize-panes
-```
-
-You can optionally add on or off to specify which state you want; otherwise the option is simply toggled. This option is specific to one window, so it won’t change the way your other sessions or windows operate. When you’re done, toggle it off again by repeating the command. [tip source](http://blog.sanctum.geek.nz/sync-tmux-panes/)
-
-    
 ## Copy mode:
 
-Pressing PREFIX [ places us in Copy mode. We can then use our movement keys to move our cursor around the screen. By default, the arrow keys work. we set our configuration file to use Vim keys for moving between windows and resizing panes so we wouldn’t have to take our hands off the home row. tmux has a vi mode for working with the buffer as well. To enable it, add this line to .tmux.conf:
-
+Pressing PREFIX places us in Copy mode. 
+We can then use our movement keys to move our cursor around the screen. 
+By default, the arrow keys work. we set our configuration file to use Vim keys for moving between windows and resizing panes so we wouldn’t have to take our hands off the home row. 
+tmux has a vi mode for working with the buffer as well. 
+To enable it, add this line to .tmux.conf:
+```
     setw -g mode-keys vi
+```
+With this option set, we can use h, j, k, and l to move around our buffer.‘’
 
-With this option set, we can use h, j, k, and l to move around our buffer.
 
-To get out of Copy mode, we just press the ENTER key. Moving around one character at a time isn’t very efficient. Since we enabled vi mode, we can also use some other visible shortcuts to move around the buffer.
-
-For example, we can use "w" to jump to the next word and "b" to jump back one word. And we can use "f", followed by any character, to jump to that character on the same line, and "F" to jump backwards on the line.
-
+### vim 
        Function                vi             emacs
        Back to indentation     ^              M-m
        Clear selection         Escape         C-g
@@ -208,35 +201,7 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
        Start selection         Space          C-Space
        Transpose chars                        C-t
 
-## Misc
 
-    d  detach
-    t  big clock
-    ?  list shortcuts
-    :  prompt
-
-## Configurations Options:
-
-    # Mouse support - set to on if you want to use the mouse
-    * setw -g mode-mouse off
-    * set -g mouse-select-pane off
-    * set -g mouse-resize-pane off
-    * set -g mouse-select-window off
-
-    # Set the default terminal mode to 256color mode
-    set -g default-terminal "screen-256color"
-
-    # enable activity alerts
-    setw -g monitor-activity on
-    set -g visual-activity on
-
-    # Center the window list
-    set -g status-justify centre
-
-    # Maximize and restore a pane
-    unbind Up bind Up new-window -d -n tmp \; swap-pane -s tmp.1 \; select-window -t tmp
-    unbind Down
-    bind Down last-window \; swap-pane -s tmp.1 \; kill-window -t tmp
 
 ## Resources:
 
