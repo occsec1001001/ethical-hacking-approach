@@ -83,38 +83,72 @@ bind p paste-buffer
  ctrl+a a 
 ```
 - shortcuts
+
 ```ctrl+a ?```
+
 - vertical split window
+
 ```ctrl+a %```
+
 - horizontal split window
+
 ```ctrl+a ‘’```
+
 - change pane arrangement
+
 ```ctrl+a <Space>```
+
 - rotate panes
+
 ```ctrl+a o```
+
 - move left [vim] 
+
 ```ctrl+a h```
+
 - move down [vim]
+
 ```ctrl+a j```
+
 - move up [vim]
+
 ```ctrl+a k```
+
 - move right [vim]
+
+
 ```ctrl+a l```
+
 - create window
+
 ```ctrl+a c```
+
 - list windows
+
 ```ctrl+a w```
+
 - next window
+
 ```ctrl+a n```
+
 - previous window
+
 ```ctrl+a p```
+
 - find window
+
 ```ctrl+a f```
+
 - name window
+
 ```ctrl+a ,```
+
 - kill window
+
 ```ctrl+a &```
+
 - goto window
+
 
 
 ## Commands
@@ -133,11 +167,11 @@ bind p paste-buffer
 :list-panes
 ```
 - resize down
-```
+
 ```
 :resize-pane-D 20 	
 ```
-```
+
 - resize up
 ```
 :resize-pane -U 20 	 
@@ -232,7 +266,7 @@ With this option set, we can use h, j, k, and l to move around our buffer.‘’
 * [tmuxguide readthedocs](https://tmuxguide.readthedocs.io/en/latest/tmux/tmux.html)
 * [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtmux/tmux)
 * [How to reorder windows](http://superuser.com/questions/343572/tmux-how-do-i-reorder-my-windows)
-* [MohamedAlaa Gist](https://gist.github.com/MohamedAlaa/2961058
+* [MohamedAlaa Gist](https://gist.github.com/MohamedAlaa/2961058)
 * [tao of tmux](https://leanpub.com/the-tao-of-tmux/read)
 * [tmux-mem-cpu-load](http://github.com/thewtex/tmux-mem-cpu-load)
 * [tmuxp](https://github.com/tony/tmuxp).
