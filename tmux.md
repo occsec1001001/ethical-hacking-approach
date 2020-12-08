@@ -59,13 +59,20 @@ bind p paste-buffer
 
 ### tmux use
 
-- start:  ``` tmux ```
-- start with session name:  ```tmux new -s myname```
-- attach:   ```tmux a  #  (or at, or attach)```
-- attach to named:  ```tmux a -t myname```
-- list sessions:  ```tmux ls```
-- kill session:   ```tmux kill-session -t myname```
-- Kill all the tmux sessions:   ```tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill```
+- start: 
+``` tmux ```
+- start with session name:  
+```tmux new -s myname```
+- attach:   
+```tmux a  #  (or at, or attach)```
+- attach to named:  
+```tmux a -t myname```
+- list sessions: 
+```tmux ls```
+- kill session:  
+```tmux kill-session -t myname```
+- Kill all the tmux sessions:  
+```tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill```
 
 ### ‘ctrl-a’ (or ctrl-b without above conf)
 
@@ -76,52 +83,77 @@ bind p paste-buffer
  ctrl+a a 
 ```
 - shortcuts
-```?```
+```ctrl+a ?```
 - vertical split window
-```%```
+```ctrl+a %```
 - horizontal split window
-```‘’```
+```ctrl+a ‘’```
 - change pane arrangement
-```<Space>```
+```ctrl+a <Space>```
 - rotate panes
-```o```
+```ctrl+a o```
 - move left [vim] 
-```h```
+```ctrl+a h```
 - move down [vim]
-```j```
+```ctrl+a j```
 - move up [vim]
-```k```
+```ctrl+a k```
 - move right [vim]
-```l```
+```ctrl+a l```
 - create window
-
+```ctrl+a c```
 - list windows
-
+```ctrl+a w```
 - next window
-
+```ctrl+a n```
 - previous window
-
+```ctrl+a p```
 - find window
-
+```ctrl+a f```
 - name window
-
+```ctrl+a ,```
 - kill window
-
+```ctrl+a &```
 - goto window
 
 
 ## Commands
 
+- command mode
 ```
 :
 ```
-:list-keys 	# shows all the commands
-:list-panes 	# shows the names of all panes
-:resize-pane -D 20 	# resize down
-:resize-pane -U 20 	# resize up
-:resize-pane -L 20 	# resize left
-:resize-pane -R 20 	# resize right
-:swap-pane -s 3 -t 1 	# swap pane ‘1’ with pane ‘3’
+
+- shows all the commands
+```
+:list-keys
+```
+- shows the names of all panes
+```
+:list-panes
+```
+- resize down
+```
+```
+:resize-pane-D 20 	
+```
+```
+- resize up
+```
+:resize-pane -U 20 	 
+```
+- resize left
+
+```
+:resize-pane -L 20 	
+```
+- resize right
+```
+:resize-pane -R 20 
+```
+- swap pane ‘1’ with pane ‘3’
+```
+:swap-pane -s 3 -t 1
 ```
 
 ## Sessions
@@ -130,16 +162,8 @@ bind p paste-buffer
     s  list sessions
     $  name session
 ```
-## Windows or tabs
-```
-    c  create window
-    w  list windows
-    n  next window
-    p  previous window
-    f  find window
-    ,  name window
-    &  kill window
-```
+
+
 ## Window Panees 
 ```
     %  vertical split
