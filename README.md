@@ -1,5 +1,5 @@
 * * *
-# my oscp learning - building my approach
+# A work in progress during my oscp learning - building my approach and overall configs and references.
 * * *
 
 Building my own framework and steps for my ethical hacking approach whislt studying for OSCP
@@ -17,6 +17,8 @@ I have taken some knowledge from others sharing support and resources, sorry for
 
 - [loop scripts linux](https://github.com/occsec1001001/simple-linux-configs-tweaks/blob/main/loops.md)
 - [new kali install config](https://raw.githubusercontent.com/occsec1001001/simple-linux-configs-tweaks/main/new-kali-install.sh)
+- [my general linux refs](https://github.com/occsec1001001/simple-linux-configs-tweaks)
+
 
 * * *
 
