@@ -9,7 +9,7 @@ ping -c 1 -W 3
 ## nmap
 
 ```bash
-nmap -Pn -n -vvv -oN first IP
+nmap -Pn -n -vvv -A
 nmap -Pn -n -vvv -p1-500 -oN partial IP
 nmap -Pn -n -vvv -p21,22,23,25,53,80,443,110,139,445,143,53,67,68,69,161 -oN targeted IP
 nmap -sO -sV -sC -v -oN general  IP 
