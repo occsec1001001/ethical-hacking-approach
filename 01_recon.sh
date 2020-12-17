@@ -20,7 +20,18 @@ pingcheck=$(ping -c 1 -W 3 "$1" | grep ttl)
 echo $pingcheck > $1.ping
 cat $1.ping | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' > $1.IP
 sublist=$(sudo sublist3r -d $1 -v -o $1.subdom1)
-$sublist
+echo $sublist
 cat $1.subdom1 | sed "s~<BR>~\n~g" | sort --unique > $1.subdom
 rm $1.subdom1
+
+ipadd=$(cat $1.IP)
+
+nmap -Pn -T4 --max-retries 1 --max-scan-delay 20 --defeat-rst-ratelimit --open -oN quick_$1.nmap $ipadd
+cat quick_$1.nmap | grep / > $1.ports
+echo ""
+echo ""
+echo ""
+echo ""
+echo "List of files created"
+ls $1*
 
