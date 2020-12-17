@@ -1,12 +1,8 @@
 * * *
-## set up environment
+## check host
 
-```bash
-cd Documents/STAGE
-mkdir boxname
-touch ip.txt && echo "IP" > ip.txt
-echo "MyIP - tun0" >> ip.txt
-nano /etc/hosts .... IP Hostname
+```
+ping -c 1 -W 3 
 ```
 
 * * *
