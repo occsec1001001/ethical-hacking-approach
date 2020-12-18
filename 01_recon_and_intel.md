@@ -1,8 +1,9 @@
 * * *
-## check host
+## check host/s
 
 ```
-ping -c 1 -W 3 
+ping -c 1 -W 3 IP/domain
+nmap -n -vv -sn 192.168.*.* -oG - | grep -i 'up'
 ```
 
 * * *
