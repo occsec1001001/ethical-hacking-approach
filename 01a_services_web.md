@@ -3,21 +3,20 @@
 
 
 ```bash
-mkdir scrapelinkdata
-cd scrapelinkdata
-wget -q -r 15 -x 5 IPADDRESS
-cd ...
-grep -r -Po -h '(?<=href=") [^"]*' scrapelinkdata/ > links.temp
-grep "^http" links.temp > links.filtered
-sort -u links.filtered > scrapelinks.list
-grep 'username [^"]*' scrapelinkdata/ > username.scrape
-grep 'password [^"]*' scrapelinkdata/ > password.scrape
-grep 'token [^"]*' scrapelinkdata/ > token.scrape
+ipadd=$1
+echo "$ipadd"
+adir=$(/bin/pwd -P)
+mkdir $adir/scrapeweb
+cd scrapeweb
+wget -r -l inf --no-check-certificate "https://$ipadd"
 
-rm -rf scrapelinkdata links.temp links.filtered
-
-to try:
-grep -r -Po -h '(?<=href=") [^"]*' scrapelinkdata/ | grep "^http" | sort -u > scrapedlinks.list
+grep -o "http[^ ]*" ./$ipadd/*.* > links.web
+grep -o "username[^ ]*" ./$ipadd/*.* >  username.web
+grep "password [^ ]*" ./$ipadd/*.* >  password.web
+grep "token [^ ]*" ./$ipadd/*.* >  token.web
+grep "key [^ ]*" ./$ipadd/*.* >  key.web
+grep "API [^ ]*" ./$ipadd/*.* >  api.web
+echo "web site scrape completed....."
 
 ```
 
